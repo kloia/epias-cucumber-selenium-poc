@@ -18,7 +18,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         glue = "com/epias/step_def",
         features = "src/test/resources/features",
-        tags = "",
+        tags = "@wip",
         dryRun = false
 )
 public class CucumberTestRunner {
