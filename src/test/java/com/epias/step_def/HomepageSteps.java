@@ -3,6 +3,7 @@ package com.epias.step_def;
 import com.epias.pages.Homepage;
 import com.epias.utilities.ConfReader;
 import com.epias.utilities.Driver;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
 
@@ -20,5 +21,12 @@ public class HomepageSteps {
 
         homepage.clickSignUpButton();
     }
+
+    @Given("clicks {string} under {string}")
+    public void clicks_under(String subMenu, String menu) {
+
+        homepage.clickSubmenuUnderMenu(subMenu, menu);
+    }
+
 
 }

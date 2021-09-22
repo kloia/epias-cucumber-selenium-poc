@@ -19,7 +19,7 @@ import org.junit.runner.RunWith;
         glue = "com/epias/step_def",
         features = "src/test/resources/features",
         tags = "@wip",
-        dryRun = false
+        dryRun = true
 )
 public class CucumberTestRunner {
 }
