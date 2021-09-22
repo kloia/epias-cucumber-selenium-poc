@@ -11,7 +11,7 @@ public class Hooks {
 
     @Before
     public void setup(){
-        Driver.get().get(ConfReader.get("url"));
+
         Driver.get().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         Driver.get().manage().window().maximize();
     }
