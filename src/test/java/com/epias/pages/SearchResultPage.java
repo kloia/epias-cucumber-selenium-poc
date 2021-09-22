@@ -16,7 +16,7 @@ public class SearchResultPage {
     public WebElement searchResultText;
 
     public void verifySearchResult(){
-        Assert.assertTrue(searchResultText.getText().contains("sonuç bulundu."));
+        Assert.assertTrue(searchResultText.getText().contains("sonuç bulundsadfsadfu."));
 
     }
 }
