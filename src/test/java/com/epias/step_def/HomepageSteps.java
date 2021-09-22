@@ -29,4 +29,8 @@ public class HomepageSteps {
     }
 
 
+    @When("search for {string}")
+    public void searchFor(String keyword) {
+        homepage.searchFor(keyword);
+    }
 }
