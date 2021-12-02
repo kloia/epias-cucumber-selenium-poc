@@ -1,9 +1,7 @@
-package com.epias.step_def;
+package com.epias.step_def.n11steps;
 
-import com.epias.pages.ProductDetailsPage;
-import com.epias.utilities.Driver;
+import com.epias.pages.n11pages.ProductDetailsPage;
 import io.cucumber.java.en.Then;
-import org.openqa.selenium.support.PageFactory;
 
 public class ProductDetailsPageStep {
 

@@ -1,7 +1,6 @@
-package com.epias.step_def;
+package com.epias.step_def.n11steps;
 
-import com.epias.pages.ProductListingPage;
-import com.epias.utilities.Utils;
+import com.epias.pages.n11pages.ProductListingPage;
 import io.cucumber.java.en.When;
 
 public class ProductListingPageSteps {

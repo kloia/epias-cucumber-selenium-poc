@@ -1,9 +1,8 @@
-package com.epias.step_def;
+package com.epias.step_def.n11steps;
 
-import com.epias.pages.Homepage;
+import com.epias.pages.n11pages.Homepage;
 import com.epias.utilities.ConfReader;
 import com.epias.utilities.Driver;
-import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
 

@@ -14,7 +14,7 @@ Feature: demo feature
     When clicks on 1st product
     Then user should see add to cart button
 
-  @wip
+
   Scenario Outline: Verify search result
     When search for "<searchKey>"
     Then user should see search result

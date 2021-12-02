@@ -1,6 +1,6 @@
-package com.epias.step_def;
+package com.epias.step_def.n11steps;
 
-import com.epias.pages.RegisterPage;
+import com.epias.pages.n11pages.RegisterPage;
 import io.cucumber.java.en.Then;
 
 public class RegisterPageSteps {

@@ -1,4 +1,4 @@
-package com.epias.pages;
+package com.epias.pages.n11pages;
 
 import com.epias.utilities.Driver;
 import org.junit.Assert;
