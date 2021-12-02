@@ -9,16 +9,10 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class Homepage {
-    public Homepage(){
-        PageFactory.initElements(Driver.get(), this);
-    }
+public class Homepage extends BasePage {
 
     @FindBy(className = "btnSignUp")
     public WebElement signUpButton;
-
-    @FindBy(id = "searchData")
-    public WebElement searchBox;
 
 
     public void clickSignUpButton(){
@@ -31,11 +25,7 @@ public class Homepage {
         Driver.get().findElement(By.linkText(submenu)).click();
     }
 
-    public void searchFor(String keyword){
-        //searchbox send keys
-        //search button click
-        searchBox.sendKeys(keyword, Keys.ENTER);
-    }
+
 
 
 }
