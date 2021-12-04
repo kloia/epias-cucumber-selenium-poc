@@ -16,18 +16,19 @@ public class Driver {
 
     }
 
-    private static WebDriver driver;
+
+    private static InheritableThreadLocal<WebDriver> driverPool = new InheritableThreadLocal<>();
 
     public static WebDriver get() {
 
-        if (driver == null) {
+        if (driverPool.get() == null) {
             String browser = ConfReader.get("browser");
             switch (browser) {
                 case "chrome":
                     WebDriverManager.chromedriver().setup();
-                    driver = new ChromeDriver();
+                    driverPool.set(new ChromeDriver());
                     break;
-                case "chrome-headless":
+               /* case "chrome-headless":
                     WebDriverManager.chromedriver().setup();
                     driver = new ChromeDriver(new ChromeOptions().setHeadless(true));
                     break;
@@ -58,18 +59,20 @@ public class Driver {
                         throw new WebDriverException("Your OS doesn't support Safari");
                     WebDriverManager.getInstance(SafariDriver.class).setup();
                     driver = new SafariDriver();
-                    break;
+                    break;*/
             }
 
         }
 
-        return driver;
+        return driverPool.get();
     }
 
     public static void closeDriver() {
-        if (driver != null) {
+  /*      if (driver != null) {
             driver.quit();
             driver = null;
-        }
+        }*/
+        driverPool.get().quit();
+        driverPool.remove();
     }
 }
